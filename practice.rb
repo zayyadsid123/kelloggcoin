@@ -27,3 +27,30 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+#p blockchain
+ben_amount=0
+brian_amount=0
+evan_amount=0
+anthony_amount=0
+
+wallets = Hash.new(0)
+p wallets
+
+for chain in blockchain
+
+  if(chain["to_user"])
+    wallets[chain["to_user"]] = wallets[chain["to_user"]] + chain["amount"]
+    
+  end
+
+  if(chain["from_user"])
+    wallets[chain["from_user"]] = wallets[chain["from_user"]] - chain["amount"]
+    
+  end
+
+  
+  
+  
+end
+
+p wallets
